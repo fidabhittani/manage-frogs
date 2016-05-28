@@ -1,0 +1,60 @@
+<% layout('layout') %>
+<div class="container theme-showcase" role="main">
+<div class="row" id="main">
+        <div class="col-md-12">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Frogs</h3>
+                    <button class="btn btn-success" style="float:right; margin:15px" v-on:click="getAddFrog" title="Add new Frog Info">
+                    	<i  class="glyphicon glyphicon-plus"></i>
+                    </button>
+            </div>
+            <div class="panel-body">
+            Following is the Grid shows a list of Frogs inside a POND.
+
+
+
+            </div>
+
+			<table class="table"> 
+				<thead> 
+					<tr> 
+						<th>id</th> 
+						<th>Image</th> 
+						<th>Name</th> 
+						<th>Color</th> 
+						<th>Gender</th> 
+						<th>Action</th> 
+					</tr>
+				</thead> 
+
+				<tbody> 
+					<tr v-for="frog in Frogs"> 
+						<th scope="row">{{frog.id}}</th> 
+						<td>
+							<a href="{{frog.image}}" target="_blank">
+							<img src="{{frog.image}}" width="50px" /></a>
+						</td> 
+							
+						<td>{{frog.frog_name}}</td> 
+						<td>{{frog.frog_color}}</td> 
+						<td>{{frog.gender}}</td> 
+						<td>
+
+		                    <a class="btn btn-danger" v-on:click="deleteFrog($index)" title="Delete Frog">
+		                    	<i class="glyphicon glyphicon-remove"></i>
+		                    </a>
+		                    <button class="btn btn-info" v-on:click="editFrog($index)" title="Update Frog Info">
+		                    	<i class="glyphicon glyphicon-pencil"></i>
+		                    </button>
+
+						</td> 
+					</tr> 
+				</tbody> 
+			</table>
+          </div>
+        </div><!-- /.col-sm-4 -->
+  </div>
+</div>
+<% include footer.ejs%>
+<script type="text/javascript" src="../scripts/index.js"></script>

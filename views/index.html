@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Tech test</title>
+<!-- Latest compiled and minified CSS -->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+
+</head>
+<body>
+<div class="container theme-showcase" role="main">
+<div class="row" id="main">
+        <div class="col-md-12">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Frogs</h3>
+            </div>
+            <div class="panel-body">
+            Following is the Grid shows a list of Frogs inside a POND.
+
+            </div>
+
+			<table class="table"> 
+				<thead> 
+					<tr> 
+						<th>id</th> 
+						<th>Name</th> 
+						<th>Color</th> 
+						<th>Gender</th> 
+					</tr>
+				</thead> 
+
+				<tbody> 
+					<tr v-for="frog in Frogs"> 
+						<th scope="row">{{frog.id}}</th> 
+						<td>{{frog.frog_name}}</td> 
+						<td>{{frog.frog_color}}</td> 
+						<td>{{frog.gender}}</td> 
+					</tr> 
+				</tbody> 
+			</table>
+          </div>
+        </div><!-- /.col-sm-4 -->
+  </div>
+</div>
+
+</body>
+
+<script src="https://code.jquery.com/jquery-2.2.4.min.js"   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="   crossorigin="anonymous"></script> 
+<!-- Latest compiled and minified JavaScript -->
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+<script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/vue/1.0.24/vue.min.js"></script>
+
+
+<script type="text/javascript">
+	new Vue({
+	  el: '#main',
+	  data: {
+	  	apiURL :'/api/',
+	    Frogs:[],
+	  },
+	    ready : function()
+	    {
+	        this.fetchFrogs();
+	    },
+
+	  methods: {
+        fetchFrogs: function()
+        {
+		    var self = this; // Saving the Context
+		    $.get( self.apiURL + 'frogs', function( data ) {
+		        self.Frogs = data;
+		    });
+        }, // End of Fetch
+
+        
+	  }
+
+	});
+
+</script>
+
+</html>

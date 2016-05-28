@@ -1,0 +1,178 @@
+<% layout('layout') %>
+<div class="container theme-showcase" role="main">
+<div class="row" id="AddFrogs">
+        <div class="col-md-12">
+          <div class="panel panel-primary">
+            <div class="panel-heading">
+              <h3 class="panel-title">Add Frog</h3>
+            </div>
+            <div class="panel-body">
+	            Here you would be able to add Frog.
+            </div>
+
+
+            	<div class="col-md-6">
+            		
+
+			      <form class="form-signin">
+			        <h2 class="form-signin-heading">Fill the Frog Form</h2>
+			       
+			        <div class="col-md-12" class="input-group">
+				        <label for="inputName" >Name</label>
+				        <input type="text" id="inputName" class="form-control" 
+				        placeholder="Frog Name"  v-model="frog_name">
+			        </div>
+
+			        <div class="col-md-12" class="input-group">
+				        <label for="inputColor" >Color</label>
+					  <select id="inputColor" class="form-control" placeholder="Frog Color"  v-model="frog_color">
+					    <option value="Green">Green</option>
+					    <option value="Blue">Blue</option>
+					    <option value="Red">Red</option>
+					    <option value="Gray">Gray</option>
+					    <option value="Purple">Purple</option>
+					    <option value="Maroon">Maroon</option>
+					  </select>
+			        </div>
+
+			        <div class="col-md-12" class="input-group">
+				        <label for="inputGender" >Gender</label>
+
+					  <select id="inputGender" class="form-control" placeholder="Frog Gender"   v-model="gender">
+					    <option value="Male">Male</option>
+					    <option value="Female">Female</option>
+					    <option value="Unknown">Unknown</option>
+					  </select>
+
+			        </div>
+
+			        <div class="col-md-12" class="input-group">
+				        <label for="inputMating" > Mating</label>
+					  <select id="inputMating" class="form-control" 
+				        placeholder="Frog Mating"   v-model="mating">
+					    <option value="Yes">Yes</option>
+					    <option value="No">No</option>
+					  </select>
+			        </div>
+
+			        <div class="col-md-12" class="input-group">
+				        <label for="inputNoise" > Noise</label>
+					  <select id="inputNoise" class="form-control" 
+				        placeholder="Frog Noise" required="" v-model="noise">
+					    <option value="Yes">Yes</option>
+					    <option value="No">No</option>
+					  </select>
+
+			        </div>
+
+			        <div class="col-md-12" class="input-group">
+				        <label for="inputNoiseTime" > Noise Time</label>
+
+					  <select id="inputNoiseTime" class="form-control" 
+				        placeholder="Frog Noise Time" required="" v-model="noise_time">
+					    <option value="Morning">Morning</option>
+					    <option value="Evening">Evening</option>
+					    <option value="Night">Night</option>
+					  </select>
+			        </div>
+
+			        <div class="col-md-12" class="input-group">
+				        <label for="inputComplaints" > Complaints</label>
+
+					  <select id="inputNoise" id="inputComplaints" class="form-control" 
+				        placeholder="Frog Complaints"  v-model="complaints">
+					    <option value="Yes">Yes</option>
+					    <option value="No">No</option>
+					  </select>
+
+			        </div>
+			        <div class="col-md-12" class="input-group">
+				        <label for="inputDOB" > Date of Birth</label>
+						  <select id="inputDOB" class="form-control" 
+					        placeholder="Frog Date of Birth"  v-model="dob">
+						    <option value="1990">1990</option>
+						    <option value="1991">1991</option>
+						    <option value="1992">1992</option>
+						    <option value="1993">1993</option>
+						    <option value="1994">1994</option>
+						    <option value="1995">1995</option>
+						    <option value="1996">1996</option>
+						    <option value="1997">1997</option>
+						    <option value="1998">1998</option>
+						    <option value="1999">1999</option>
+						    <option value="2000">2000</option>
+						    <option value="2001">2001</option>
+						    <option value="2002">2002</option>
+						    <option value="2003">2003</option>
+						    <option value="2004">2004</option>
+						    <option value="2005">2005</option>
+						    <option value="2006">2006</option>
+						    <option value="2007">2007</option>
+						    <option value="2008">2008</option>
+						    <option value="2009">2009</option>
+						    <option value="2010">2010</option>
+						    <option value="2011">2011</option>
+						    <option value="2012">2012</option>
+						    <option value="2013">2013</option>
+						    <option value="2014">2014</option>
+						    <option value="2015">2015</option>
+						  </select>
+			        </div>
+			        <div class="col-md-12" class="input-group">
+				        <label for="inputDOD" > Date of Death</label>
+						  <select id="inputDOD" class="form-control" 
+				        placeholder="Frog Date of Death" required="" v-model="dod">
+						    <option value="1990">1990</option>
+						    <option value="1991">1991</option>
+						    <option value="1992">1992</option>
+						    <option value="1993">1993</option>
+						    <option value="1994">1994</option>
+						    <option value="1995">1995</option>
+						    <option value="1996">1996</option>
+						    <option value="1997">1997</option>
+						    <option value="1998">1998</option>
+						    <option value="1999">1999</option>
+						    <option value="2000">2000</option>
+						    <option value="2001">2001</option>
+						    <option value="2002">2002</option>
+						    <option value="2003">2003</option>
+						    <option value="2004">2004</option>
+						    <option value="2005">2005</option>
+						    <option value="2006">2006</option>
+						    <option value="2007">2007</option>
+						    <option value="2008">2008</option>
+						    <option value="2009">2009</option>
+						    <option value="2010">2010</option>
+						    <option value="2011">2011</option>
+						    <option value="2012">2012</option>
+						    <option value="2013">2013</option>
+						    <option value="2014">2014</option>
+						    <option value="2015">2015</option>
+						  </select>
+			        </div>
+			        <div class="col-md-12" class="input-group">
+				        <label for="inputPondEnv" >Frog Pond Env</label>
+							  <select id="inputPondEnv" class="form-control" 
+						        placeholder="Frog Pond Env"  v-model="pond_env">
+							    <option value="Worst">Worst</option>
+							    <option value="Better">Better</option>
+							    <option value="Good">Good</option>
+							    <option value="Very Good">Very Good</option>
+							    <option value="Great">Great</option>
+							  </select>
+			        </div>
+				     <div class="col-md-4">
+				        <button class="btn btn-lg btn-primary btn-block" v-if='!frog_id' v-on:click="addFrogs">Save</button>
+
+				        <button class="btn btn-lg btn-primary btn-block" v-if='frog_id' 
+				        v-on:click="updateFrog">Update</button>
+				      </div>
+			      </form>
+            	</div>
+			      <div class="clearfix"></div>
+          </div>
+        </div><!-- /.col-sm-4 -->
+  </div>
+</div>
+<% include footer.ejs%>
+<script type="text/javascript" src="../scripts/add_page.js"></script>

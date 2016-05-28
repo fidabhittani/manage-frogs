@@ -1,0 +1,31 @@
+{
+  "name": "manage-frogs",
+  "version": "1.0.0",
+  "description": "This is a Small Demo app for managing Frogs",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.15.1",
+    "ejs": "^2.4.2",
+    "ejs-locals": "^1.0.2",
+    "express": "^4.13.4"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/fidabhittani/manage-frogs.git"
+  },
+  "keywords": [
+    "nodejs",
+    "vuejs"
+  ],
+  "author": "Fida bhittani",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/fidabhittani/manage-frogs/issues"
+  },
+  "homepage": "https://github.com/fidabhittani/manage-frogs#readme"
+}
